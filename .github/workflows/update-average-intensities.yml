@@ -29,7 +29,7 @@ jobs:
           signoff: false
           branch: average-intensities/job-${{ github.job }}
           delete-branch: true
-          title: '[Example] Update report'
+          title: '[generate_average_co2] Update report'
           body: |
             - Updated average intensities
             - Auto-generated `.github/workflows/update-average-intensities.yml` and `data/functions/generate_average_co2.js`
