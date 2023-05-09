@@ -22,11 +22,12 @@ jobs:
         id: cpr
         uses: peter-evans/create-pull-request@v5
         with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: Update report
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
-          branch: average-intensities/job-${{ env.GITHUB_JOB }}
+          branch: average-intensities/job-${{ github.job }}
           delete-branch: true
           title: '[Example] Update report'
           body: |
