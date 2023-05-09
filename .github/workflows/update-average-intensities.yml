@@ -26,7 +26,7 @@ jobs:
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
-          branch: average-intensities/job-${{ GITHUB_JOB }}
+          branch: average-intensities/job-${{ env.GITHUB_JOB }}
           delete-branch: true
           title: '[Example] Update report'
           body: |
