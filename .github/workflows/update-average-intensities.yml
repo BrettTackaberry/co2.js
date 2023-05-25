@@ -8,7 +8,6 @@ on:
         description: 'Log level'     
         required: true
         default: 'warning'
-
 jobs:
   createPullRequest:
     runs-on: ubuntu-latest
@@ -27,7 +26,7 @@ jobs:
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
-          branch: average-intensities/job-${{ github.job }}
+          branch: average-intensities/${{ github.run_id }}
           delete-branch: true
           title: '[generate_average_co2] Update report'
           body: |
